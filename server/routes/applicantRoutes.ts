@@ -1,16 +1,16 @@
 import express from 'express';
 const Router = express.Router();
 
-import applicantController from '../controllers/applicantController';
+import ApplicantController from '../controllers/applicantController';
 
 Router.route('/')
-    .get(applicantController.getAllApplicants)
-    .post(applicantController.addNewApplicant)
-    .delete(applicantController.deleteAllApplicants)
+    .get(ApplicantController.getAllApplicants)
+    .post(ApplicantController.addNewApplicant)
+    .delete(ApplicantController.deleteAllApplicants)
 
 Router.route('/:applicantID')
-    .get(applicantController.getSingleApplicant)
-    .delete(applicantController.deleteSingleApplicant)
-    .patch(applicantController.updateApplicant)
+    .get(ApplicantController.getSingleApplicant)
+    .delete(ApplicantController.deleteSingleApplicant)
+    .patch(ApplicantController.updateApplicant)
 
 export default Router;
